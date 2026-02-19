@@ -6,5 +6,7 @@
   "extras": [
     "https://tbgift.pages.dev/"
   ],
-  "clan_rules": "https://clan-regeln.test.de"
+  "tb_gift_link": "https://tbgift.pages.dev/",
+  "clan_rules": "https://clan-regeln.test.de",
+  "resource_extra": "https://tbgift.pages.dev/"
 }

@@ -19,11 +19,11 @@
       "links": [
         {
           "label": "ROE – Rule of Engagement",
-          "url": "https://bit.ly/K290-ROE"
+          "linkKey": "roe"
         },
         {
           "label": "Clan-Regeln & Hofetikette",
-          "url": "https://clan-regeln.test.de"
+          "linkKey": "clan_rules"
         }
       ]
     },
@@ -34,7 +34,7 @@
       "description": "Offizielle Rechner für Meldungen nach widerrechtlichen Angriffen.",
       "cta": {
         "label": "Verlust-Calculator öffnen",
-        "url": "https://verlust-calculator.test.de"
+        "linkKey": "loss_calculator"
       }
     },
     {
@@ -47,19 +47,19 @@
           "title": "Forschungskosten (gesamt)",
           "description": "Alle Kapitel in einer Übersicht für langfristige Planung.",
           "label": "Tabelle öffnen",
-          "url": "https://forschung-gesamt.test.de"
+          "linkKey": "research_total"
         },
         {
           "title": "Forschungskosten (einzeln)",
           "description": "Detailkosten pro Level für minutiöse Ressourcenzuteilung.",
           "label": "Liste öffnen",
-          "url": "https://forschung-einzeln.test.de"
+          "linkKey": "research_single"
         },
         {
-          "title": "Weitere Ressourcen",
-          "description": "Platz für zusätzliche Rechner, Spreadsheets oder Karten.",
-          "label": "Platzhalter Link",
-          "url": "https://weitere-links.test.de"
+          "title": "Totalbattle Gift Links",
+          "description": "Detailkosten pro Level für minutiöse Ressourcenzuteilung.",
+          "label": "Liste öffnen",
+          "linkKey": "tb_gift_link"
         }
       ]
     }

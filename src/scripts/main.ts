@@ -1,11 +1,12 @@
 import deContent from '../content/de.json';
+import linkRegistry from '@config/links.json';
 
-type LinkItem = {
+type LinkReference = {
   label: string;
-  url: string;
+  linkKey: string;
 };
 
-type ResourceItem = LinkItem & {
+type ResourceItem = LinkReference & {
   title: string;
   description: string;
 };
@@ -15,8 +16,8 @@ type Section = {
   layout: 'links' | 'cta' | 'resources';
   title: string;
   description: string;
-  links?: LinkItem[];
-  cta?: LinkItem;
+  links?: LinkReference[];
+  cta?: LinkReference;
   resources?: ResourceItem[];
 };
 
@@ -34,6 +35,10 @@ type PortalContent = {
   };
   sections: Section[];
 };
+
+type LinkRegistry = Record<string, string>;
+
+const links: LinkRegistry = linkRegistry as LinkRegistry;
 
 const configPlaceholder = {
   links: 'config/links.json'
@@ -101,13 +106,13 @@ function buildSections(sections: Section[]): void {
   });
 }
 
-function renderLinks(links: LinkItem[]): HTMLElement {
+function renderLinks(items: LinkReference[]): HTMLElement {
   const wrapper = document.createElement('div');
   wrapper.className = 'link-list';
-  links.forEach((link) => {
+  items.forEach((link) => {
     const anchor = document.createElement('a');
     anchor.className = 'link-pill';
-    anchor.href = link.url;
+    anchor.href = resolveLink(link.linkKey);
     anchor.target = '_blank';
     anchor.rel = 'noreferrer';
     anchor.textContent = link.label;
@@ -116,10 +121,10 @@ function renderLinks(links: LinkItem[]): HTMLElement {
   return wrapper;
 }
 
-function renderCta(cta: LinkItem): HTMLElement {
+function renderCta(cta: LinkReference): HTMLElement {
   const anchor = document.createElement('a');
   anchor.className = 'cta';
-  anchor.href = cta.url;
+  anchor.href = resolveLink(cta.linkKey);
   anchor.target = '_blank';
   anchor.rel = 'noreferrer';
   anchor.textContent = cta.label;
@@ -139,7 +144,7 @@ function renderResources(items: ResourceItem[]): HTMLElement {
     description.textContent = item.description;
 
     const anchor = document.createElement('a');
-    anchor.href = item.url;
+    anchor.href = resolveLink(item.linkKey);
     anchor.target = '_blank';
     anchor.rel = 'noreferrer';
     anchor.textContent = item.label;
@@ -151,5 +156,14 @@ function renderResources(items: ResourceItem[]): HTMLElement {
 }
 
 initPortal();
+
+function resolveLink(key: string): string {
+  const url = links[key];
+  if (!url) {
+    console.warn(`Missing link for key ${key}`);
+    return '#';
+  }
+  return url;
+}
 
 export { configPlaceholder };
