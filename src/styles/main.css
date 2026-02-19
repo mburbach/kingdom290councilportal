@@ -5,7 +5,7 @@
   --gold: rgb(197, 160, 89);
   --gold-bright: rgb(229, 194, 132);
   --muted: #b6b6b6;
-  --border: rgba(197, 160, 89, 0.6);
+  --border: rgba(197, 160, 89, 20%);
 }
 
 * {
@@ -29,8 +29,8 @@ body {
   padding: 2rem;
   border: 1px solid var(--border);
   border-radius: 1.5rem;
-  background: linear-gradient(135deg, #1e1e1e, #111111);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+  background: linear-gradient(135deg, #1e1e1e, #111);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 60%);
 }
 
 .hero__crest {
@@ -59,7 +59,7 @@ main {
   border: 1px solid var(--border);
   border-radius: 1rem;
   backdrop-filter: blur(16px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 60%);
 }
 
 .card p {
@@ -76,9 +76,9 @@ main {
 .link-pill {
   padding: 0.75rem 1rem;
   border-radius: 999px;
-  background: rgba(197, 160, 89, 0.2);
+  background: rgba(197, 160, 89, 20%);
   color: rgb(229, 229, 229);
-  border: 1px solid rgba(197, 160, 89, 0.5);
+  border: 1px solid rgba(197, 160, 89, 50%);
   text-decoration: none;
   font-weight: 500;
   transition: transform 0.2s ease, background 0.2s ease;
@@ -86,7 +86,7 @@ main {
 
 .link-pill:hover {
   transform: translateY(-2px);
-  background: rgba(197, 160, 89, 0.35);
+  background: rgba(197, 160, 89, 35%);
 }
 
 .cta {
@@ -100,7 +100,7 @@ main {
   color: #111;
   text-decoration: none;
   font-weight: 600;
-  box-shadow: 0 10px 30px rgba(197, 160, 89, 0.4);
+  box-shadow: 0 10px 30px rgba(197, 160, 89, 40%);
 }
 
 .resource-grid {
@@ -114,7 +114,7 @@ main {
 
 .resource-grid li {
   padding: 1rem;
-  border: 1px solid rgba(197, 160, 89, 0.2);
+  border: 1px solid rgba(197, 160, 89, 20%);
   border-radius: 0.9rem;
   background: var(--bg-panel-soft);
 }
@@ -131,7 +131,7 @@ footer {
   padding-bottom: 1rem;
 }
 
-@media (max-width: 700px) {
+@media (width <= 700px) {
   body {
     padding: 1.5rem 1rem;
   }
