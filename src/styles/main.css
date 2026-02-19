@@ -42,7 +42,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 0.25rem;
-  font-family: var(--font-heading);
+  font-family: var(--font-heading), serif;
   font-size: 1.2rem;
   background: radial-gradient(circle, var(--gold-bright), var(--gold));
   color: #111;
