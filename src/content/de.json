@@ -1,0 +1,67 @@
+{
+  "locale": "de",
+  "meta": {
+    "pageTitle": "Königreich 290 – Ratsportal",
+    "heroEyebrow": "Total Battle – Königreich 290",
+    "heroTitle": "Ratssaal der Drachenbanner",
+    "heroLead": "Alle offiziellen Verordnungen, Rechner und Bibliotheken unseres Königreiches gesammelt auf einer Seite.",
+    "footer": "© {{year}} Königreich 290 – Erstellt für die Feldherren des Drachenbanners."
+  },
+  "hero": {
+    "crest": "290"
+  },
+  "sections": [
+    {
+      "id": "rules",
+      "layout": "links",
+      "title": "Regeln & Vereinbarungen",
+      "description": "Bleibe immer auf dem aktuellen Stand unserer Gesetze.",
+      "links": [
+        {
+          "label": "ROE – Rule of Engagement",
+          "url": "https://roe.test.de"
+        },
+        {
+          "label": "Clan-Regeln & Hofetikette",
+          "url": "https://clan-regeln.test.de"
+        }
+      ]
+    },
+    {
+      "id": "loss",
+      "layout": "cta",
+      "title": "Verlust & Kompensation",
+      "description": "Offizielle Rechner für Meldungen nach widerrechtlichen Angriffen.",
+      "cta": {
+        "label": "Verlust-Calculator öffnen",
+        "url": "https://verlust-calculator.test.de"
+      }
+    },
+    {
+      "id": "library",
+      "layout": "resources",
+      "title": "Hilfreiche Bibliothek",
+      "description": "Versorgung mit aktuellen Zahlen & Tabellen.",
+      "resources": [
+        {
+          "title": "Forschungskosten (gesamt)",
+          "description": "Alle Kapitel in einer Übersicht für langfristige Planung.",
+          "label": "Tabelle öffnen",
+          "url": "https://forschung-gesamt.test.de"
+        },
+        {
+          "title": "Forschungskosten (einzeln)",
+          "description": "Detailkosten pro Level für minutiöse Ressourcenzuteilung.",
+          "label": "Liste öffnen",
+          "url": "https://forschung-einzeln.test.de"
+        },
+        {
+          "title": "Weitere Ressourcen",
+          "description": "Platz für zusätzliche Rechner, Spreadsheets oder Karten.",
+          "label": "Platzhalter Link",
+          "url": "https://weitere-links.test.de"
+        }
+      ]
+    }
+  ]
+}
