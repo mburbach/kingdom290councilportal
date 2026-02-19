@@ -1,4 +1,5 @@
-import deContent from '../content/de.json';
+import enContentRaw from '../content/en.json';
+import deContentRaw from '../content/de.json';
 import linkRegistry from '@config/links.json';
 
 type LinkReference = {
@@ -38,13 +39,17 @@ type PortalContent = {
 
 type LinkRegistry = Record<string, string>;
 
-const links: LinkRegistry = linkRegistry as LinkRegistry;
+const links = linkRegistry as LinkRegistry;
 
 const configPlaceholder = {
   links: 'config/links.json'
 };
 
-const activeContent: PortalContent = deContent;
+const contentMap = {
+  en: enContentRaw as PortalContent,
+  de: deContentRaw as PortalContent
+};
+const activeContent: PortalContent = contentMap.en;
 
 export function initPortal(content: PortalContent = activeContent): void {
   document.documentElement.lang = content.locale;

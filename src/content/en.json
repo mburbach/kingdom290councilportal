@@ -1,0 +1,67 @@
+{
+  "locale": "en",
+  "meta": {
+    "pageTitle": "Kingdom #290 – Council Portal",
+    "heroEyebrow": "Total Battle – Kingdom 290",
+    "heroTitle": "Council Hall of Kingdom #290",
+    "heroLead": "Every royal directive, calculator, and archive for our kingdom gathered on a single page.",
+    "footer": "© {{year}} syntaXerror – Crafted for Kingdom #290"
+  },
+  "hero": {
+    "crest": "290"
+  },
+  "sections": [
+    {
+      "id": "rules",
+      "layout": "links",
+      "title": "Rules & Agreements",
+      "description": "Stay current with every decree that governs our realm.",
+      "links": [
+        {
+          "label": "ROE – Rule of Engagement",
+          "linkKey": "roe"
+        },
+        {
+          "label": "Clan Rules & Court Etiquette",
+          "linkKey": "clan_rules"
+        }
+      ]
+    },
+    {
+      "id": "loss",
+      "layout": "cta",
+      "title": "Loss & Compensation",
+      "description": "Official calculators for claims after unlawful attacks.",
+      "cta": {
+        "label": "Open Loss Calculator",
+        "linkKey": "loss_calculator"
+      }
+    },
+    {
+      "id": "library",
+      "layout": "resources",
+      "title": "Royal Library",
+      "description": "Fresh numbers and spreadsheets for strategy planning.",
+      "resources": [
+        {
+          "title": "Research Costs (Total)",
+          "description": "All chapters in one overview for long-term projects.",
+          "label": "Open table",
+          "linkKey": "research_total"
+        },
+        {
+          "title": "Research Costs (Individual)",
+          "description": "Level-by-level expenses for precise resource allocation.",
+          "label": "Open list",
+          "linkKey": "research_single"
+        },
+        {
+          "title": "Additional Resources",
+          "description": "Space for upcoming calculators, sheets, or maps.",
+          "label": "Placeholder link",
+          "linkKey": "resource_extra"
+        }
+      ]
+    }
+  ]
+}
