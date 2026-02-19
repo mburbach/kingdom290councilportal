@@ -1,12 +1,11 @@
 :root {
-  --bg-night: #050810;
-  --bg-panel: rgba(15, 23, 42, 0.7);
-  --gold: #e0b35c;
-  --gold-bright: #f5d787;
-  --accent: #4c6ef5;
-  --accent-dark: #2d3b84;
-  --muted: #9cabd1;
-  --border: rgba(224, 179, 92, 0.4);
+  --bg-night: rgb(10, 10, 10);
+  --bg-panel: #141414;
+  --bg-panel-soft: #1b1b1b;
+  --gold: rgb(197, 160, 89);
+  --gold-bright: rgb(229, 194, 132);
+  --muted: #b6b6b6;
+  --border: rgba(197, 160, 89, 0.6);
 }
 
 * {
@@ -16,8 +15,7 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background: radial-gradient(circle at top, #151b34, var(--bg-night));
-  background-attachment: fixed;
+  background-color: var(--bg-night);
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -31,8 +29,8 @@ body {
   padding: 2rem;
   border: 1px solid var(--border);
   border-radius: 1.5rem;
-  background: linear-gradient(135deg, rgba(15, 48, 87, 0.85), rgba(11, 16, 32, 0.95));
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+  background: linear-gradient(135deg, #1e1e1e, #111111);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
 }
 
 .hero__crest {
@@ -43,9 +41,9 @@ body {
   place-items: center;
   font-family: var(--font-heading);
   font-size: 1.8rem;
-  background: radial-gradient(circle, var(--gold), var(--accent-dark));
+  background: radial-gradient(circle, var(--gold-bright), var(--gold));
   color: #111;
-  border: 2px solid var(--gold-bright);
+  border: 2px solid var(--gold);
   text-shadow: none;
 }
 
@@ -61,11 +59,11 @@ main {
   border: 1px solid var(--border);
   border-radius: 1rem;
   backdrop-filter: blur(16px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
 
 .card p {
-  color: var(--muted);
+  color: rgb(229, 229, 229);
 }
 
 .link-list {
@@ -78,9 +76,9 @@ main {
 .link-pill {
   padding: 0.75rem 1rem;
   border-radius: 999px;
-  background: rgba(76, 110, 245, 0.12);
-  color: var(--gold-bright);
-  border: 1px solid rgba(76, 110, 245, 0.5);
+  background: rgba(197, 160, 89, 0.2);
+  color: rgb(229, 229, 229);
+  border: 1px solid rgba(197, 160, 89, 0.5);
   text-decoration: none;
   font-weight: 500;
   transition: transform 0.2s ease, background 0.2s ease;
@@ -88,7 +86,7 @@ main {
 
 .link-pill:hover {
   transform: translateY(-2px);
-  background: rgba(76, 110, 245, 0.35);
+  background: rgba(197, 160, 89, 0.35);
 }
 
 .cta {
@@ -98,11 +96,11 @@ main {
   padding: 0.85rem 1.5rem;
   margin-top: 1rem;
   border-radius: 0.75rem;
-  background: linear-gradient(135deg, var(--accent), #7f5af0);
-  color: #fff;
+  background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+  color: #111;
   text-decoration: none;
   font-weight: 600;
-  box-shadow: 0 10px 30px rgba(76, 110, 245, 0.35);
+  box-shadow: 0 10px 30px rgba(197, 160, 89, 0.4);
 }
 
 .resource-grid {
@@ -116,9 +114,9 @@ main {
 
 .resource-grid li {
   padding: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(197, 160, 89, 0.2);
   border-radius: 0.9rem;
-  background: rgba(7, 11, 24, 0.6);
+  background: var(--bg-panel-soft);
 }
 
 .resource-grid a {
