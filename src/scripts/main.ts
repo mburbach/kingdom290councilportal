@@ -48,7 +48,7 @@ export function initPortal(content: PortalContent = activeContent): void {
   setText('hero-eyebrow', content.meta.heroEyebrow);
   setText('hero-title', content.meta.heroTitle);
   setText('hero-lede', content.meta.heroLead);
-  setText('hero-crest', content.hero.crest);
+  setText('hero-crest-text', content.hero.crest);
 
   hydrateFooter(content.meta.footer);
   buildSections(content.sections);

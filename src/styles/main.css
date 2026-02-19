@@ -37,14 +37,27 @@ body {
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
   font-family: var(--font-heading);
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   background: radial-gradient(circle, var(--gold-bright), var(--gold));
   color: #111;
   border: 2px solid var(--gold);
   text-shadow: none;
+}
+
+.hero__crown {
+  width: 2rem;
+  height: 2rem;
+  color: var(--gold);
+}
+
+#hero-crest-text {
+  color: #111;
 }
 
 main {
