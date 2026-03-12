@@ -1,5 +1,6 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import linkRegistry from '@config/links.json';
+import { dailyRewards } from '../../src/data/dailyRewards';
 
 describe('portal hydration', () => {
   beforeEach(() => {
@@ -36,5 +37,8 @@ describe('portal hydration', () => {
     const cta = document.querySelector('.cta') as HTMLAnchorElement | null;
     expect(firstLink?.href).toBe(linkRegistry.roe);
     expect(cta?.href).toBe(linkRegistry.loss_calculator);
+
+    const dailyItems = document.querySelectorAll('.daily-item');
+    expect(dailyItems.length).toBe(dailyRewards.length);
   });
 });

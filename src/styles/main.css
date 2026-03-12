@@ -33,7 +33,7 @@ body {
   padding: 2rem;
   border: 1px solid var(--border);
   border-radius: 1.5rem;
-  background: rgba(30, 30, 30, 0.85);
+  background: rgba(30, 30, 30, 85%);
   box-shadow: 0 30px 80px rgba(0, 0, 0, 60%);
 }
 
@@ -140,6 +140,80 @@ main {
   color: var(--gold-bright);
   text-decoration: none;
   font-weight: 600;
+}
+
+
+.daily-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.daily-item {
+  border: 1px solid rgba(197, 160, 89, 25%);
+  border-radius: 0.9rem;
+  padding: 1rem;
+  background: rgba(18, 18, 18, 80%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.daily-item.is-today {
+  border-color: rgba(197, 160, 89, 90%);
+  box-shadow: 0 0 20px rgba(197, 160, 89, 35%);
+}
+
+.daily-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.daily-link {
+  flex: 1 1 30%;
+  min-width: 90px;
+  text-align: center;
+  padding: 0.4rem 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(197, 160, 89, 50%);
+  text-decoration: none;
+  color: rgb(229, 229, 229);
+  background: rgba(197, 160, 89, 12%);
+  font-size: 0.85rem;
+}
+
+.daily-link:hover {
+  background: rgba(197, 160, 89, 30%);
+}
+
+.daily-collapse {
+  border: 1px solid rgba(197, 160, 89, 25%);
+  border-radius: 0.9rem;
+  padding: 0.75rem 1rem;
+  background: rgba(14, 14, 14, 85%);
+}
+
+.daily-collapse summary {
+  cursor: pointer;
+  color: rgb(197, 160, 89);
+  font-weight: 600;
+  list-style: none;
+}
+
+.daily-collapse summary::marker {
+  display: none;
+}
+
+.daily-collapse summary::-webkit-details-marker {
+  display: none;
+}
+
+.daily-collapse__list {
+  margin-top: 1rem;
+  display: grid;
+  gap: 1rem;
 }
 
 footer {

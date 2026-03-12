@@ -1,6 +1,7 @@
 import enContentRaw from '../content/en.json';
 import deContentRaw from '../content/de.json';
 import linkRegistry from '@config/links.json';
+import { dailyRewards } from '../data/dailyRewards';
 
 type LinkReference = {
   label: string;
@@ -14,7 +15,7 @@ type ResourceItem = LinkReference & {
 
 type Section = {
   id: string;
-  layout: 'links' | 'cta' | 'resources';
+  layout: 'links' | 'cta' | 'resources' | 'daily';
   title: string;
   description: string;
   links?: LinkReference[];
@@ -34,6 +35,9 @@ type PortalContent = {
   hero: {
     crest: string;
   };
+  daily?: {
+    otherLabel: string;
+  };
   sections: Section[];
 };
 
@@ -50,10 +54,12 @@ const contentMap = {
   de: deContentRaw as PortalContent
 };
 const activeContent: PortalContent = contentMap.en;
+let dailyOtherLabel = 'More days';
 
 export function initPortal(content: PortalContent = activeContent): void {
   document.documentElement.lang = content.locale;
   document.title = content.meta.pageTitle;
+  dailyOtherLabel = content.daily?.otherLabel ?? 'More days';
 
   setText('hero-eyebrow', content.meta.heroEyebrow);
   setText('hero-title', content.meta.heroTitle);
@@ -107,6 +113,10 @@ function buildSections(sections: Section[]): void {
       card.appendChild(renderResources(section.resources));
     }
 
+    if (section.layout === 'daily') {
+      card.appendChild(renderDailyRewards());
+    }
+
     container.appendChild(card);
   });
 }
@@ -158,6 +168,70 @@ function renderResources(items: ResourceItem[]): HTMLElement {
     list.appendChild(li);
   });
   return list;
+}
+
+function renderDailyRewards(): HTMLElement {
+  const wrapper = document.createElement('div');
+  wrapper.className = 'daily-grid';
+  const todayLabel = new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(new Date()).toLowerCase();
+
+  const todayEntry = dailyRewards.find((reward) => reward.day.toLowerCase() === todayLabel);
+  const remaining = dailyRewards.filter((reward) => reward !== todayEntry);
+
+  if (todayEntry) {
+    wrapper.appendChild(buildDailyItem(todayEntry, true));
+  }
+
+  if (remaining.length) {
+    const details = document.createElement('details');
+    details.className = 'daily-collapse';
+    const summary = document.createElement('summary');
+    summary.textContent = dailyOtherLabel;
+    details.appendChild(summary);
+
+    const restList = document.createElement('div');
+    restList.className = 'daily-collapse__list';
+
+    remaining.forEach((reward) => {
+      restList.appendChild(buildDailyItem(reward));
+    });
+
+    details.appendChild(restList);
+    wrapper.appendChild(details);
+  }
+
+  return wrapper;
+}
+
+function buildDailyItem(reward: (typeof dailyRewards)[number], isToday = false): HTMLElement {
+  const item = document.createElement('article');
+  item.className = 'daily-item';
+  if (isToday) {
+    item.classList.add('is-today');
+  }
+
+  const heading = document.createElement('h3');
+  heading.textContent = `${reward.day} – ${reward.title}`;
+
+  const linkGroup = document.createElement('div');
+  linkGroup.className = 'daily-links';
+
+  linkGroup.appendChild(buildRewardLink('Total Battle', reward.links.totalBattle));
+  linkGroup.appendChild(buildRewardLink('Triumph', reward.links.triumph));
+  linkGroup.appendChild(buildRewardLink('Mobile', reward.links.mobile));
+
+  item.append(heading, linkGroup);
+  return item;
+}
+
+function buildRewardLink(label: string, url: string): HTMLAnchorElement {
+  const anchor = document.createElement('a');
+  anchor.href = url;
+  anchor.target = '_blank';
+  anchor.rel = 'noreferrer';
+  anchor.className = 'daily-link';
+  anchor.textContent = label;
+  return anchor;
 }
 
 initPortal();

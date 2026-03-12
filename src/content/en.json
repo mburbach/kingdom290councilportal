@@ -20,7 +20,16 @@
     "copyButton": "Copy entry",
     "copySuccess": "Entry copied"
   },
+  "daily": {
+    "otherLabel": "More days"
+  },
   "sections": [
+    {
+      "id": "daily",
+      "layout": "daily",
+      "title": "Daily Login Rewards",
+      "description": "Claim the official Total Battle login presents for browser, Triumph and mobile."
+    },
     {
       "id": "rules",
       "layout": "links",

@@ -20,7 +20,16 @@
     "copyButton": "Eintrag kopieren",
     "copySuccess": "Eintrag kopiert"
   },
+  "daily": {
+    "otherLabel": "Weitere Tage"
+  },
   "sections": [
+    {
+      "id": "daily",
+      "layout": "daily",
+      "title": "Tägliche Login-Belohnungen",
+      "description": "Hier findest du die offiziellen Login-Presents für Browser, Triumph und Mobile."
+    },
     {
       "id": "rules",
       "layout": "links",
