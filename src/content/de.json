@@ -63,24 +63,6 @@
       "description": "Versorgung mit aktuellen Zahlen & Tabellen.",
       "resources": [
         {
-          "title": "Forschungskosten (gesamt)",
-          "description": "Alle Kapitel in einer Übersicht für langfristige Planung.",
-          "label": "Tabelle öffnen",
-          "linkKey": "research_total"
-        },
-        {
-          "title": "Forschungskosten (einzeln)",
-          "description": "Detailkosten pro Level für minutiöse Ressourcenzuteilung.",
-          "label": "Liste öffnen",
-          "linkKey": "research_single"
-        },
-        {
-          "title": "Totalbattle Gift Links",
-          "description": "Detailkosten pro Level für minutiöse Ressourcenzuteilung.",
-          "label": "Liste öffnen",
-          "linkKey": "tb_gift_link"
-        },
-        {
           "title": "Archiv & Chroniken",
           "description": "Wiki-Stil Übersicht für Anleitungen und Aufzeichnungen.",
           "label": "Königreich-Archiv öffnen",

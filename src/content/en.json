@@ -63,24 +63,6 @@
       "description": "Fresh numbers and spreadsheets for strategy planning.",
       "resources": [
         {
-          "title": "Research Costs (Total)",
-          "description": "All chapters in one overview for long-term projects.",
-          "label": "Open table",
-          "linkKey": "research_total"
-        },
-        {
-          "title": "Research Costs (Individual)",
-          "description": "Level-by-level expenses for precise resource allocation.",
-          "label": "Open list",
-          "linkKey": "research_single"
-        },
-        {
-          "title": "Additional Resources",
-          "description": "Space for upcoming calculators, sheets, or maps.",
-          "label": "Placeholder link",
-          "linkKey": "resource_extra"
-        },
-        {
           "title": "Archive & Records",
           "description": "Wiki-style knowledge base for guides and chronicles.",
           "label": "Open Kingdom Archive",
