@@ -10,6 +10,16 @@
   "hero": {
     "crest": "290"
   },
+  "wiki": {
+    "pageTitle": "Kingdom 290 – Archive",
+    "eyebrow": "Kingdom 290 Archive",
+    "title": "Royal Records & Guides",
+    "subtitle": "Structured like a chronicle to speed up knowledge sharing.",
+    "backLinkLabel": "Back to Council",
+    "navToggleLabel": "Categories",
+    "copyButton": "Copy entry",
+    "copySuccess": "Entry copied"
+  },
   "sections": [
     {
       "id": "rules",
@@ -60,6 +70,12 @@
           "description": "Space for upcoming calculators, sheets, or maps.",
           "label": "Placeholder link",
           "linkKey": "resource_extra"
+        },
+        {
+          "title": "Archive & Records",
+          "description": "Wiki-style knowledge base for guides and chronicles.",
+          "label": "Open Kingdom Archive",
+          "linkKey": "wiki_portal"
         }
       ]
     }

@@ -1,0 +1,6 @@
+services:
+  portal:
+    image: kingdom290
+    ports:
+      - "8080:80"
+    restart: unless-stopped

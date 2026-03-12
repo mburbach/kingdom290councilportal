@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kingdom 290 Archive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/typography.css" />
+    <link rel="stylesheet" href="./styles/wiki.css" />
+  </head>
+  <body class="wiki-body">
+    <header class="wiki-header">
+      <div>
+        <p class="eyebrow" id="wiki-eyebrow"></p>
+        <h1 id="wiki-title"></h1>
+        <p id="wiki-subtitle"></p>
+      </div>
+      <a href="/index.html" class="wiki-back" id="wiki-back-link"></a>
+    </header>
+
+    <main class="wiki-layout" id="wiki-layout">
+      <nav class="wiki-nav" id="wiki-nav">
+        <button class="wiki-nav__toggle" id="wiki-nav-toggle" aria-expanded="false">
+          <span aria-hidden="true">☰</span>
+          <span id="wiki-nav-toggle-text"></span>
+        </button>
+        <div class="wiki-nav__groups" id="wiki-menu"></div>
+      </nav>
+
+      <article class="wiki-article">
+        <div class="wiki-article__meta">
+          <span id="wiki-breadcrumb"></span>
+          <button id="wiki-copy" type="button"></button>
+        </div>
+        <h2 id="wiki-article-title"></h2>
+        <div id="wiki-article-content" class="wiki-article__content"></div>
+      </article>
+    </main>
+
+    <script type="module" src="./scripts/wiki.ts"></script>
+  </body>
+</html>

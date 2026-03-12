@@ -23,7 +23,7 @@ describe('portal hydration', () => {
   it('renders hero, sections and footer from localized content', async () => {
     const module = await import('../../src/scripts/main');
 
-    expect(document.getElementById('hero-title')?.textContent).toContain('Ratssaal');
+    expect(document.getElementById('hero-title')?.textContent).toContain('Council Hall of Kingdom #290');
 
     const cards = document.querySelectorAll('#portal-sections .card');
     expect(cards.length).toBeGreaterThanOrEqual(3);

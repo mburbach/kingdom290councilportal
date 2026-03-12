@@ -10,6 +10,16 @@
   "hero": {
     "crest": "290"
   },
+  "wiki": {
+    "pageTitle": "Königreich 290 – Archiv",
+    "eyebrow": "Königreich 290 Archiv",
+    "title": "Königliche Aufzeichnungen & Leitfäden",
+    "subtitle": "Im Chronik-Stil, damit Wissen schneller geteilt wird.",
+    "backLinkLabel": "Zurück zum Portal",
+    "navToggleLabel": "Kategorien",
+    "copyButton": "Eintrag kopieren",
+    "copySuccess": "Eintrag kopiert"
+  },
   "sections": [
     {
       "id": "rules",
@@ -60,6 +70,12 @@
           "description": "Detailkosten pro Level für minutiöse Ressourcenzuteilung.",
           "label": "Liste öffnen",
           "linkKey": "tb_gift_link"
+        },
+        {
+          "title": "Archiv & Chroniken",
+          "description": "Wiki-Stil Übersicht für Anleitungen und Aufzeichnungen.",
+          "label": "Königreich-Archiv öffnen",
+          "linkKey": "wiki_portal"
         }
       ]
     }
